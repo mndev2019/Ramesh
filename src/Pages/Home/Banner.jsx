@@ -1,15 +1,34 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Banner = () => {
+  const navigate = useNavigate();
+  const handleScrollLink = (e, sectionId) => {
+  e.preventDefault()
+  // setIsOpen(false)
+
+  if (location.pathname !== "/") {
+    navigate("/")
+
+    setTimeout(() => {
+      document
+        .getElementById(sectionId)
+        ?.scrollIntoView({ behavior: "smooth" })
+    }, 300)
+  } else {
+    document
+      .getElementById(sectionId)
+      ?.scrollIntoView({ behavior: "smooth" })
+  }
+}
   return (
-    <section className="relative bg-white overflow-hidden">
+    <section id="/" className="relative bg-white overflow-hidden">
       
       {/* Background Gradient Glow */}
       <div className="absolute -top-32 -left-32 w-[500px] h-[500px] bg-blue-100 rounded-full blur-3xl opacity-60"></div>
       <div className="absolute -bottom-32 -right-32 w-[500px] h-[500px] bg-indigo-100 rounded-full blur-3xl opacity-60"></div>
 
-      <div className="relative max-w-7xl mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-6 lg:py-28 py-10 grid md:grid-cols-2 md:gap-16 gap-10 items-center">
 
         {/* LEFT CONTENT */}
         <div>
@@ -17,12 +36,12 @@ const Banner = () => {
              Google Workspace Partner
           </span>
 
-          <h1 className="mt-6 text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+          <h1 className="mt-6 text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
             Transform Your Business With
             <span className="text-blue-600"> Google Workspace</span>
           </h1>
 
-          <p className="mt-6 text-lg text-gray-600 leading-relaxed">
+          <p className="mt-6 md:text-lg text-md text-gray-600 leading-relaxed">
             Boost collaboration, enhance security, and streamline operations
             with enterprise-grade Google Workspace solutions tailored for
             modern businesses.
@@ -45,17 +64,19 @@ const Banner = () => {
           </div>
 
           {/* Buttons */}
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="md:mt-10 mt-5 flex flex-wrap gap-4">
             <Link
-              to="/contact"
-              className="bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-blue-700 transition shadow-lg"
+              to="/"
+              onClick={(e) => handleScrollLink(e, "contact")}
+              className="bg-blue-600 text-white md:px-8 px-5 md:py-3 py-2 rounded-xl font-semibold hover:bg-blue-700 transition shadow-lg"
             >
               Get Consultation
             </Link>
 
             <Link
-              to="/gws"
-              className="border border-blue-600 text-blue-600 px-8 py-3 rounded-xl font-semibold hover:bg-blue-50 transition"
+              to="/"
+              onClick={(e) => handleScrollLink(e, "service")}
+              className="border border-blue-600 text-blue-600 md:px-8 px-5 md:py-3 py-2 rounded-xl font-semibold hover:bg-blue-50 transition"
             >
               Explore Services
             </Link>

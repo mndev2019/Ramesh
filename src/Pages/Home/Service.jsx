@@ -26,16 +26,16 @@ const services = [
 
 const Service = () => {
   return (
-    <section className="py-24 bg-[#0f172a] text-white">
+    <section id="service" className="md:py-24 py-15 bg-[#0f172a] text-white">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+        <div className="text-center lg:mb-20 mb-10">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
             Our <span className="text-blue-500">Google Powered</span> Solutions
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-red-500 mx-auto mt-6 rounded-full"></div>
-          <p className="mt-6 text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="mt-6 text-gray-400 max-w-2xl mx-auto md:text-lg text-md">
             Delivering enterprise cloud solutions with performance, security
             and innovation at the core.
           </p>

@@ -17,7 +17,7 @@ const solutions = [
 
 const Solutions = () => {
   return (
-    <section className="relative py-24 bg-gradient-to-r from-blue-50 via-white to-blue-50 overflow-hidden">
+    <section className="relative lg:py-24 py-15 bg-gradient-to-r from-blue-50 via-white to-blue-50 overflow-hidden">
 
       {/* Same Glow Style as GoogleCloudPartner */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl"></div>
@@ -27,10 +27,10 @@ const Solutions = () => {
         
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-800">
             Solutions For Every Business
           </h2>
-          <p className="mt-5 text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="mt-5 text-gray-600 md:text-lg text-[17px] max-w-2xl mx-auto">
             Tailored cloud and workspace solutions designed to empower businesses at every stage of growth.
           </p>
         </div>

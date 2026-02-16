@@ -4,6 +4,9 @@ import Service from './Service'
 import Whychose from './Whychose'
 import Solutions from './Solutions'
 import GoogleCloudPartner from './GoogleCloudPartner'
+import GoogleWorkSpace from './GoogleWorkSpace'
+import GoogleAds from './GoogleAds'
+import Contact from './Contact'
 
 const Home = () => {
   return (
@@ -12,7 +15,10 @@ const Home = () => {
      <Service/>
      <Whychose/>
      <GoogleCloudPartner/>
+     <GoogleAds/>
      <Solutions/>
+     <GoogleWorkSpace/>
+     <Contact/>
    </>
   )
 }

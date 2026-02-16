@@ -1,5 +1,6 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const features = [
   " Cloud Experts",
@@ -9,8 +10,27 @@ const features = [
 ];
 
 const Whychose = () => {
+    const navigate = useNavigate();
+  const handleScrollLink = (e, sectionId) => {
+  e.preventDefault()
+  // setIsOpen(false)
+
+  if (location.pathname !== "/") {
+    navigate("/")
+
+    setTimeout(() => {
+      document
+        .getElementById(sectionId)
+        ?.scrollIntoView({ behavior: "smooth" })
+    }, 300)
+  } else {
+    document
+      .getElementById(sectionId)
+      ?.scrollIntoView({ behavior: "smooth" })
+  }
+}
   return (
-    <section className="relative py-28 bg-white overflow-hidden">
+    <section id="about" className="relative lg:py-28 py-15 bg-white overflow-hidden">
       
       {/* Background Accent Shape */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-blue-600 rounded-l-[120px] hidden lg:block"></div>
@@ -23,12 +43,12 @@ const Whychose = () => {
             Why Choose Us
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 leading-tight text-gray-900">
+          <h2 className="text-3xl md:text-5xl font-bold mt-4 leading-tight text-gray-900">
      Google Cloud <br />
             <span className="text-blue-600">Partner You Can Trust</span>
           </h2>
 
-          <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-lg">
+          <p className="mt-6 text-gray-600 md:text-lg text-md leading-relaxed max-w-lg">
             Ramesh Corp delivers scalable and enterprise-ready Google Cloud
             solutions tailored to accelerate your digital transformation.
           </p>
@@ -63,7 +83,7 @@ const Whychose = () => {
               Google technologies to scale securely and efficiently.
             </p>
 
-            <button className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition duration-300 shadow-lg hover:shadow-xl">
+            <button  onClick={(e) => handleScrollLink(e, "contact")} className="md:px-8 px-5 md:py-4 py-2 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition duration-300 shadow-lg hover:shadow-xl">
               Talk to Our Experts
             </button>
           </div>

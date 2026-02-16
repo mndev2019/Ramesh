@@ -3,7 +3,7 @@ import googlecloud from '../../assets/Image/googlecloud.svg'
 
 const GoogleCloudPartner = () => {
   return (
-    <section className="relative py-20 bg-gradient-to-r from-blue-50 via-white to-blue-50 overflow-hidden">
+    <section className="relative md:py-20 py-10 bg-gradient-to-r from-blue-50 via-white to-blue-50 overflow-hidden px-10">
       
       {/* Background Blur Circle */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-blue-400 opacity-20 rounded-full blur-3xl"></div>
@@ -14,19 +14,19 @@ const GoogleCloudPartner = () => {
           
           {/* Left Content */}
           <div className="lg:w-1/2 text-center lg:text-left">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
               Proud <span className="text-blue-600">Google Cloud</span> Partner
             </h2>
-            <p className="text-gray-600 text-lg mb-6">
+            <p className="text-gray-600 md:text-lg mb-6">
               We are officially recognized as a Google Cloud Partner, delivering
               secure, scalable and high-performance cloud solutions to our clients.
             </p>
 
-            <div className="flex justify-center lg:justify-start">
+            {/* <div className="flex justify-center lg:justify-start">
               <button className="px-6 py-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
                 Learn More
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Image */}

@@ -1,207 +1,198 @@
-// import React from 'react'
-// import { FaClock, FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa'
-
-// const Contact = () => {
-//   return (
-//   <>
-//   <section className="relative py-24 bg-gradient-to-br from-indigo-50 via-white to-blue-50 overflow-hidden">
-
-//       {/* Decorative Background Shape */}
-//       <div className="absolute top-0 right-0 w-72 h-72 bg-blue-200 opacity-30 rounded-full blur-3xl"></div>
-
-//       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
-
-//         {/* LEFT SIDE - MAP (Elevated Card Style) */}
-//         <div className="relative">
-//           <div className="absolute -top-6 -left-6 w-full h-full bg-blue-600 rounded-3xl"></div>
-
-//           <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-//             <iframe
-//               title="Google Map"
-//              src="https://maps.google.com/maps?q=Kanpur&t=&z=13&ie=UTF8&iwloc=&output=embed"
-//               className="w-full h-[450px] border-0"
-//               loading="lazy"
-//             ></iframe>
-//           </div>
-//         </div>
-
-//         {/* RIGHT SIDE - CONTACT DETAILS */}
-//         <div className="bg-white/80 backdrop-blur-lg p-12 rounded-3xl shadow-xl border border-gray-100">
-
-//           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-//             Let's Connect
-//           </h2>
-
-//           <p className="text-gray-600 mb-10 text-lg">
-//             Have a question or want to work together?  
-//             Reach out through any of the channels below.
-//           </p>
-
-//           <div className="space-y-8">
-
-//             {/* Address */}
-//             <div className="flex items-start gap-5 group">
-//               <div className="p-4 rounded-2xl bg-indigo-100 group-hover:bg-indigo-600 transition">
-//                 <FaMapMarkerAlt className="text-indigo-600 group-hover:text-white text-xl" />
-//               </div>
-//               <div>
-//                 <h4 className="font-semibold text-gray-800">Office Address</h4>
-//                 <p className="text-gray-600 text-sm mt-1">
-//                   123 Business Avenue, Kanpur, India
-//                 </p>
-//               </div>
-//             </div>
-
-//             {/* Phone */}
-//             <div className="flex items-start gap-5 group">
-//               <div className="p-4 rounded-2xl bg-green-100 group-hover:bg-green-600 transition">
-//                 <FaPhoneAlt className="text-green-600 group-hover:text-white text-xl" />
-//               </div>
-//               <div>
-//                 <h4 className="font-semibold text-gray-800">Phone Number</h4>
-//                 <p className="text-gray-600 text-sm mt-1">
-//                   +91 98765 43210
-//                 </p>
-//               </div>
-//             </div>
-
-//             {/* Email */}
-//             <div className="flex items-start gap-5 group">
-//               <div className="p-4 rounded-2xl bg-blue-100 group-hover:bg-blue-600 transition">
-//                 <FaEnvelope className="text-blue-600 group-hover:text-white text-xl" />
-//               </div>
-//               <div>
-//                 <h4 className="font-semibold text-gray-800">Email Address</h4>
-//                 <p className="text-gray-600 text-sm mt-1">
-//                   info@yourcompany.com
-//                 </p>
-//               </div>
-//             </div>
-
-//             {/* Working Hours */}
-//             <div className="flex items-start gap-5 group">
-//               <div className="p-4 rounded-2xl bg-purple-100 group-hover:bg-purple-600 transition">
-//                 <FaClock className="text-purple-600 group-hover:text-white text-xl" />
-//               </div>
-//               <div>
-//                 <h4 className="font-semibold text-gray-800">Working Hours</h4>
-//                 <p className="text-gray-600 text-sm mt-1">
-//                   Mon – Sat: 9:00 AM – 7:00 PM
-//                 </p>
-//               </div>
-//             </div>
-
-//           </div>
-
-//         </div>
-
-//       </div>
-//     </section>
-//   </>
-//   )
-// }
-
-// export default Contact
-
-
-import React from "react"
-import {
-  FaClock,
-  FaEnvelope,
-  FaMapMarkerAlt,
-  FaPhoneAlt,
-} from "react-icons/fa"
+import axios from 'axios';
+import React, { useState } from 'react'
+import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa'
+import { toast } from 'react-toastify';
+import { Base_Url } from '../../Api/Base_Url';
 
 const Contact = () => {
+  const [name, setname] = useState("");
+  const [email, setemail] = useState("");
+  const [mobile, setmobile] = useState("");
+  const [message, setmessage] = useState("");
+ const handlesubmit = async (e) => {
+  e.preventDefault();
+
+  const requestData = {
+    name,
+    email,
+    mobile,
+    message
+  };
+
+  try {
+    const response = await axios.post(`${Base_Url}/contact_enquiry`, requestData);
+
+    if (response.data.success === true) {
+      toast.success(response.data.message || "Submit successfully");
+      
+      // optional: clear form
+      setname("");
+      setemail("");
+      setmobile("");
+      setmessage("");
+    } else {
+      toast.error(response.data.message || "Something went wrong");
+    }
+
+  } catch (error) {
+    toast.error(
+      error.response?.data?.message || "Server error, try again"
+    );
+  }
+};
   return (
-    <section   id="contact" className="relative lg:py-28 py-15 bg-gradient-to-br from-indigo-50 via-white to-sky-50 overflow-hidden">
+    <section id='contact' className="relative py-24 bg-gradient-to-br from-indigo-50 via-white to-blue-50 overflow-hidden">
 
-      {/* Soft Background Shapes */}
-      <div className="absolute -top-24 -left-24 w-96 h-96 bg-indigo-200/40 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-sky-200/40 rounded-full blur-3xl"></div>
+      <div className="absolute top-0 right-0 w-72 h-72 bg-blue-200 opacity-30 rounded-full blur-3xl"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
 
-        {/* LEFT — MAP */}
-        <div className="relative group">
-          <div className="absolute inset-0 bg-indigo-300/30 rounded-3xl blur-xl group-hover:opacity-60 transition"></div>
+        {/* LEFT SIDE */}
+        <div className="space-y-10">
 
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-indigo-100">
-            <iframe
-              title="Google Map"
-              src="https://maps.google.com/maps?q=Kanpur&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              className="w-full h-[460px]"
-              loading="lazy"
-            ></iframe>
-
-            {/* Floating Address Card */}
-            <div className="absolute bottom-6 left-6 bg-white/95 p-6 rounded-2xl shadow-xl">
-              <h4 className="font-semibold text-gray-900">Our Office</h4>
-              <p className="text-sm text-gray-600 mt-1">
-                123 Business Avenue <br />
-                Kanpur, India
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* RIGHT — CONTACT DETAILS */}
-        <div className="space-y-12">
-
-          {/* Header */}
           <div>
-            <h2 className="lg:text-5xl text-4xl font-extrabold text-gray-900">
-              Get in <span className="text-indigo-600">Touch</span>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Get In Touch
             </h2>
-            <p className="text-gray-600 mt-6 text-lg max-w-xl">
-              Feel free to reach out using the contact information below.
+            <p className="text-gray-600 text-lg">
+              We'd love to hear from you. Reach out using the details below.
             </p>
           </div>
 
-          {/* Info Cards */}
-          <div className="grid sm:grid-cols-2 gap-6">
-            {[
-              {
-                icon: <FaMapMarkerAlt />,
-                title: "Address",
-                value: "Kanpur, India",
-              },
-              {
-                icon: <FaPhoneAlt />,
-                title: "Phone",
-                value: "+91 98765 43210",
-              },
-              {
-                icon: <FaEnvelope />,
-                title: "Email",
-                value: "info@yourcompany.com",
-              },
-              {
-                icon: <FaClock />,
-                title: "Working Hours",
-                value: "Mon – Sat, 9 AM – 7 PM",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="flex gap-4 items-start p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition border border-gray-100"
-              >
-                <div className="p-3 rounded-xl bg-indigo-50 text-indigo-600 text-lg">
-                  {item.icon}
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-800">{item.title}</h4>
-                  <p className="text-sm text-gray-600 mt-1">{item.value}</p>
-                </div>
-              </div>
-            ))}
+          <div className="space-y-8">
+
+         <div className="flex items-start gap-6">
+  <div className="p-4 bg-indigo-100 rounded-2xl">
+    <FaMapMarkerAlt className="text-indigo-600 text-xl" />
+  </div>
+  <div>
+    <h4 className="font-semibold text-gray-800">Address</h4>
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=Ramesh+Tower+Tripureshwor+Kathmandu+Nepal"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-600 text-sm mt-1 block hover:text-indigo-600 transition"
+    >
+      1st Floor, Ramesh Tower, Tripureshwor, Kathmandu, Nepal
+    </a>
+  </div>
+</div>
+
+<div className="flex items-start gap-6">
+  <div className="p-4 bg-green-100 rounded-2xl">
+    <FaPhoneAlt className="text-green-600 text-xl" />
+  </div>
+  <div>
+    <h4 className="font-semibold text-gray-800">Phone</h4>
+    <a
+      href="tel:+9779802325779"
+      className="text-gray-600 text-sm mt-1 block hover:text-green-600 transition"
+    >
+      +977-9802325779
+    </a>
+    <a
+      href="tel:+9779802051122"
+      className="text-gray-600 text-sm block hover:text-green-600 transition"
+    >
+      +977-980-2051122
+    </a>
+  </div>
+</div>
+
+<div className="flex items-start gap-6">
+  <div className="p-4 bg-blue-100 rounded-2xl">
+    <FaEnvelope className="text-blue-600 text-xl" />
+  </div>
+  <div>
+    <h4 className="font-semibold text-gray-800">Email</h4>
+    <a
+      href="mailto:teledigital@rameshcorp.com"
+      className="text-gray-600 text-sm mt-1 block hover:text-blue-600 transition"
+    >
+      teledigital@rameshcorp.com
+    </a>
+  </div>
+</div>
+
+          </div>
+
+          {/* Map Below Details */}
+          <div className="rounded-3xl overflow-hidden shadow-xl">
+           <iframe
+  title="Google Map"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.728627240092!2d85.3138626!3d27.6947811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19e12d171ed5%3A0xe195ac66b1c94b82!2sTele%20Digital!5e0!3m2!1sen!2sin!4v1772181365428!5m2!1sen!2sin"
+  className="w-full h-[300px] border-0"
+  loading="lazy"
+  allowFullScreen
+  referrerPolicy="no-referrer-when-downgrade"
+></iframe>
           </div>
 
         </div>
+
+        {/* RIGHT SIDE - FORM */}
+        <div className="bg-white p-12 rounded-3xl shadow-2xl border border-gray-100">
+
+          <h3 className="text-2xl font-semibold text-gray-900 mb-8">
+            Send Us a Message
+          </h3>
+
+          <form className="space-y-6" onSubmit={handlesubmit}>
+
+            <div>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setname(e.target.value)}
+                placeholder="Full Name"
+                className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
+
+            <div>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setemail(e.target.value)}
+                placeholder="Email Address"
+                className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
+
+            <div>
+              <input
+                type="tel"
+                value={mobile}
+                onChange={(e) => setmobile(e.target.value)}
+                placeholder="Mobile Number"
+                className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
+
+            <div>
+              <textarea
+                rows="5"
+                value={message}
+                onChange={(e) => setmessage(e.target.value)}
+                placeholder="Write your message..."
+                className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-4 rounded-xl font-semibold transition duration-300 shadow-lg"
+            >
+              Send Message
+            </button>
+
+          </form>
+
+        </div>
+
       </div>
     </section>
   )
 }
 
 export default Contact
-

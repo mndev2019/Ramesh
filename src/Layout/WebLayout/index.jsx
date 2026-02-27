@@ -3,7 +3,7 @@ import Header from "../Header";
 import { Outlet } from "react-router-dom";
 import Footer from "../Footer";
 
-const index = () => {
+const WebLayout = () => {
   return (
     <>
       <Header />
@@ -13,4 +13,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default WebLayout;

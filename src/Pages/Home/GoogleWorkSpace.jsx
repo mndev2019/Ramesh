@@ -1,9 +1,11 @@
 import React from 'react'
 import { FaCheckCircle} from 'react-icons/fa'
 import gws from '../../assets/Image/gws.png'
+import { useNavigate } from 'react-router-dom'
 
 
 const GoogleWorkSpace = () => {
+  const navigate = useNavigate();
   return (
    <>
      <section id='gws' className="lg:py-20 py-15 bg-gradient-to-br from-blue-50 to-indigo-100 relative overflow-hidden">
@@ -37,9 +39,9 @@ const GoogleWorkSpace = () => {
             ))}
           </div>
 
-          {/* <button className="mt-10 px-8 py-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition">
+          <button onClick={()=> navigate('/gws-pricing')} className="mt-10 px-8 py-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition cursor-pointer">
             Get Started
-          </button> */}
+          </button>
         </div>
 
         {/* RIGHT IMAGE DESIGN */}

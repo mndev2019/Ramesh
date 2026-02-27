@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const solutions = [
   {
@@ -16,6 +18,15 @@ const solutions = [
 ];
 
 const Solutions = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,   // 👈 Important (animation baar-baar chalegi)
+      mirror: true,  // 👈 Scroll up/down dono me animation
+    });
+  
+    AOS.refresh();
+  }, []);
   return (
     <section className="relative lg:py-24 py-15 bg-gradient-to-r from-blue-50 via-white to-blue-50 overflow-hidden">
 
@@ -26,7 +37,7 @@ const Solutions = () => {
       <div className="relative max-w-6xl mx-auto px-6">
         
         {/* Heading */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16"  data-aos="flip-left">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-800">
             Solutions For Every Business
           </h2>

@@ -8,6 +8,7 @@ import GoogleWorkSpace from './GoogleWorkSpace'
 import GoogleAds from './GoogleAds'
 import Contact from './Contact'
 import Blog from '../Blogs/Blog'
+import WorkspaceApp from './WorkSpaceApp'
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
      <GoogleAds/>
      <Solutions/>
      <GoogleWorkSpace/>
+     <WorkspaceApp/>
      <Blog/>
      <Contact/>
    </>

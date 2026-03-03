@@ -10,11 +10,12 @@ import docsicon from '../../assets/Image/docs.svg'
 import { IoCheckmarkSharp } from 'react-icons/io5'
 import FreeTrialPopup from '../../Component/FreeTrialPopup.jsx'
 import Faq from './Faq.jsx'
+import WorkspaceApp from './WorkSpaceApp.jsx'
 
 const plans = [
     {
         title: 'Starter',
-        price: '₹499',
+        price: '$6',
         // oldPrice: '₹270',
         storage: '30 GB',
         storageNote: 'pooled storage per user*',
@@ -28,7 +29,7 @@ const plans = [
     },
     {
         title: 'Standard',
-        price: '₹1899',
+        price: '$12',
         // oldPrice: '₹1080',
         storage: '2 TB',
         storageNote: '65x more than Starter*',
@@ -47,7 +48,7 @@ const plans = [
     },
     {
         title: 'Plus',
-        price: '₹3099',
+        price: '$18',
         storage: '5 TB',
         storageNote: '2.5x more than Standard*',
         features: [
@@ -87,8 +88,8 @@ const GwsPricing = () => {
                                 {/* Header */}
                                 <div className="p-6 border-b border-gray-200">
                                     <h3 className="text-xl font-bold mb-2">{plan.title}</h3>
-                                    <div className="text-3xl font-bold text-[#001D08] mb-1">{plan.price}
-                                        {/* <span className="text-base font-normal">INR</span> */}
+                                    <div className="text-3xl font-bold text-[rgb(0,29,8)] mb-1">{plan.price}
+                                        <span className="text-base font-normal"> USD</span>
                                     </div>
                                     {plan.oldPrice && (
                                         <div className="text-gray-500 line-through text-sm mb-2">{plan.oldPrice}**</div>
@@ -152,7 +153,9 @@ const GwsPricing = () => {
                 </div>
 
             </section>
+               <WorkspaceApp/>
             <Faq />
+         
 
         </>
 

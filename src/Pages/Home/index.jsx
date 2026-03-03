@@ -10,6 +10,8 @@ import Contact from './Contact'
 import Blog from '../Blogs/Blog'
 import WorkspaceApp from './WorkSpaceApp'
 import MobileServise from './MobileServise'
+import MobileBlog from '../Blogs/MobileBlog'
+import MobileSolution from './MobileSolution'
 
 const Home = () => {
   return (
@@ -21,9 +23,11 @@ const Home = () => {
      <GoogleCloudPartner/>
      <GoogleAds/>
      <Solutions/>
+     <MobileSolution/>
      <GoogleWorkSpace/>
      <WorkspaceApp/>
      <Blog/>
+     <MobileBlog/>
      <Contact/>
    </>
   )

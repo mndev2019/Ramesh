@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import googlecloud from '../../assets/Image/googlecloud.png'
 import gws from '../../assets/Image/gwsicon.webp'
 import cloudmigration from '../../assets/Image/cloudmigration.png'
-import security from '../../assets/Image/security.png'
+import security from '../../assets/Image/key-removebg-preview.png'
 
 const services = [
   {

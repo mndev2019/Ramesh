@@ -10,6 +10,9 @@ import { ToastContainer } from 'react-toastify'
 import Blog from './Pages/Blogs/Blog'
 import BlogDetail from './Pages/Blogs/BlogDetail'
 import { useEffect } from 'react'
+import GCPDetail from './Pages/Home/GCPDetail'
+import CloudMigration from './Pages/Home/CloudMigration'
+import SecurityCompliance from './Pages/Home/SecurityCompliance'
 
 // --- 1. Create a Analytics Wrapper ---
 // This component listens for URL changes and sends them to Google
@@ -44,6 +47,9 @@ function App() {
           <Route path='/term-condition' element={<TermsCondition />} />
           <Route path='/blog' element={<Blog />} />
           <Route path="/blog-detail/:id" element={<BlogDetail />} />
+          <Route path='/gcp' element={<GCPDetail/>}/>
+          <Route path='/cloud-migration' element={<CloudMigration/>}/>
+          <Route path='/security-compliance' element={<SecurityCompliance/>}/>
 
         </Route>
 

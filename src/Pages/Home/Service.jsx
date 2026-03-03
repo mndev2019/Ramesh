@@ -50,39 +50,38 @@ const Service = () => {
   }, []);
 
   // 🔥 Slider Settings
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 600,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-        }
-      }
-    ]
-  };
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 600,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  arrows: false,
+  swipe: true,
+  touchMove: true,
+  draggable: true,
+  pauseOnTouch: true,
+  cssEase: "ease-in-out",
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: { slidesToShow: 3 }
+    },
+    {
+      breakpoint: 768,
+      settings: { slidesToShow: 2 }
+    },
+    {
+      breakpoint: 640,
+      settings: { slidesToShow: 1 }
+    }
+  ]
+};
 
   return (
-    <section id="service" className="relative py-10 bg-[#f8fafc] overflow-hidden">
+    <section id="service" className="relative py-10 bg-[#f8fafc] overflow-x-hidden overflow-y-visible">
 
       {/* Decorative Blobs */}
       <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-200 rounded-full blur-3xl opacity-30"></div>
@@ -114,7 +113,8 @@ const Service = () => {
                
                 transition-all duration-500
                 cursor-pointer h-full"
-                onClick={() => navigate(item.path)}
+              onMouseUp={() => navigate(item.path)}
+onTouchEnd={() => navigate(item.path)}
               >
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/20 to-red-500/10  transition"></div>

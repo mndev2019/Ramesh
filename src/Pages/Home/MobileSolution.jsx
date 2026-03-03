@@ -35,7 +35,7 @@ const features = [
   },
 ];
 
-const Solutions = () => {
+const MobileSolution = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -50,25 +50,16 @@ const Solutions = () => {
     dots: false,
     infinite: true,
     speed: 600,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2 }
-      },
-      {
-        breakpoint: 640,
-        settings: { slidesToShow: 1 }
-      }
-    ]
+   
   };
 
   return (
-    <section className="relative lg:py-24 py-16 bg-gray-100 overflow-hidden md:block hidden">
+    <section className="relative lg:py-24 py-16 bg-gray-100 overflow-hidden md:hidden block">
       
       {/* Background Blur */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-blue-400 opacity-20 rounded-full blur-3xl"></div>
@@ -120,4 +111,4 @@ const Solutions = () => {
   );
 };
 
-export default Solutions;
+export default MobileSolution;

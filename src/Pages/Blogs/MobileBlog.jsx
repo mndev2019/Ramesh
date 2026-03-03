@@ -13,7 +13,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Blog = () => {
+const MobileBlog = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [data, setdata] = useState([]);
@@ -67,29 +67,16 @@ const Blog = () => {
     dots: false,
     infinite: true,
     speed: 800,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+  
   };
 
   return (
-    <section id="blog" className="bg-gray-50 py-16 px-6 md:px-20 md:block hidden">
+    <section id="blog" className="bg-gray-50 py-16 px-6 md:px-20 md:hidden block">
       {/* Header */}
       <div className="text-center mb-14" data-aos="flip-left">
         <h2 className="text-4xl font-bold text-gray-800">
@@ -172,4 +159,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default MobileBlog;

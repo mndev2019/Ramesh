@@ -38,7 +38,7 @@ const services = [
   },
 ];
 
-const Service = () => {
+const MobileServise = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -55,35 +55,16 @@ const Service = () => {
     dots: false,
     infinite: true,
     speed: 600,
-    slidesToShow: 4,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-        }
-      }
-    ]
+  
   };
 
   return (
-    <section id="service" className="relative py-10 bg-[#f8fafc] overflow-hidden md:block hidden">
+    <section id="service" className="relative py-10 bg-[#f8fafc] overflow-hidden md:hidden block">
 
       {/* Decorative Blobs */}
       <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-200 rounded-full blur-3xl opacity-30"></div>
@@ -141,4 +122,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default MobileServise;

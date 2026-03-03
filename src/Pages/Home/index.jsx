@@ -9,12 +9,14 @@ import GoogleAds from './GoogleAds'
 import Contact from './Contact'
 import Blog from '../Blogs/Blog'
 import WorkspaceApp from './WorkSpaceApp'
+import MobileServise from './MobileServise'
 
 const Home = () => {
   return (
    <>
      <Banner/>
      <Service/>
+     <MobileServise/>
      <Whychose/>
      <GoogleCloudPartner/>
      <GoogleAds/>

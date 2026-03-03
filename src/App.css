@@ -1,9 +1,0 @@
-.slick-slider,
-.slick-list,
-.slick-track {
-  touch-action: pan-y;
-}
-
-.slick-slide > div {
-  height: 100%;
-}

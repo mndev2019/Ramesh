@@ -131,7 +131,7 @@ const Contact = () => {
         </div>
 
         {/* RIGHT SIDE - FORM */}
-        <div className="bg-white p-12 rounded-3xl shadow-2xl border border-gray-100">
+        <div className="bg-white lg:p-12 p-5 rounded-3xl shadow-2xl border border-gray-100">
 
           <h3 className="text-2xl font-semibold text-gray-900 mb-8">
             Send Us a Message

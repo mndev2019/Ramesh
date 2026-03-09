@@ -79,7 +79,7 @@ const Solutions = () => {
         {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
-            Why Choose Ramesh Corp as <br />
+            Why Choose Trusted Google Workspace Partner as <br />
             Your Google Partner In Nepal?
           </h2>
         </div>

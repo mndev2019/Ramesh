@@ -154,7 +154,7 @@ const WorkspaceApp = () => {
                     </h2>
 
                     <p className="mt-6 text-gray-600 md:text-lg max-w-3xl mx-auto leading-relaxed">
-                        Ramesh Corp delivers modern Google Workspace solutions to help
+                        Trusted Google Workspace Partner delivers modern Google Workspace solutions to help
                         your business communicate smarter, collaborate faster, and scale confidently.
                     </p>
 

@@ -49,7 +49,7 @@ const Whychose = () => {
           </h2>
 
           <p className="mt-6 text-gray-600 md:text-lg text-md leading-relaxed max-w-lg">
-            Ramesh Corp delivers scalable and enterprise-ready Google Cloud
+            Trusted google workspace partner delivers scalable and enterprise-ready Google Cloud
             solutions tailored to accelerate your digital transformation.
           </p>
 

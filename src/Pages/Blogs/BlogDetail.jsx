@@ -69,7 +69,7 @@ const BlogDetail = () => {
             onClick={() => navigate(-1)}
             className="mt-8 inline-flex items-center gap-2 bg-white text-blue-700 px-6 py-2 rounded-full hover:bg-blue-100 transition"
           >
-            <FaArrowLeft /> Back to Blogs
+            <FaArrowLeft /> Back to Home
           </button>
         </div>
       </div>

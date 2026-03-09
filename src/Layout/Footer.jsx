@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import logo from '../assets/Image/footerlogo.svg'
+import logo from '../assets/Image/logo.png'
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
         {/* Company Info */}
         <div>
           <Link to="/" className="text-2xl font-bold text-gray-800">
-            <img src={logo} className="h-15" />
+            <img src={logo} className="h-15 mb-3" />
           </Link>
           <p className="text-sm leading-6">
             Google Partner delivering enterprise-grade solutions
@@ -27,7 +27,7 @@ const Footer = () => {
           <ul className="space-y-2 text-sm">
 
             <li className="cursor-pointer hover:text-blue-600" onClick={() => navigate('/gws-pricing')}>Google Workspace</li>
-            <li className="cursor-pointer hover:text-blue-600" onClick={() => navigate('/gws-pricing')}>Terms & Conditions</li>
+            <li className="cursor-pointer hover:text-blue-600" onClick={() => navigate('/term-condition')}>Terms & Conditions</li>
 
           </ul>
         </div>
@@ -46,7 +46,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://www.instagram.com/teledigitalservices/"
+              href="https://www.instagram.com/workspacenepal"
               target="_blank"
               rel="noopener noreferrer"
               className="w-9 h-9 flex items-center justify-center rounded-full bg-pink-500 hover:bg-pink-600 transition"
@@ -68,7 +68,7 @@ const Footer = () => {
 
       {/* Bottom Line */}
       <div className="border-t border-gray-700 text-center py-4 text-sm">
-        © {new Date().getFullYear()} Ramesh Gorp. All Rights Reserved.
+        © {new Date().getFullYear()} Tele Digital. All Rights Reserved.
       </div>
     </footer>
   );

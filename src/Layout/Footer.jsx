@@ -37,7 +37,7 @@ const Footer = () => {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://www.facebook.com/teledigitalservices"
+              href="https://www.facebook.com/theworkspacenepal"
               target="_blank"
               rel="noopener noreferrer"
               className="w-9 h-9 flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700 transition"

@@ -15,7 +15,7 @@ import WorkspaceApp from './WorkSpaceApp.jsx'
 const plans = [
     {
         title: 'Starter',
-        price: '$6.30',
+        price: '$7',
         // oldPrice: '₹270',
         storage: '30 GB',
         storageNote: 'pooled storage per user*',
@@ -32,7 +32,7 @@ const plans = [
     },
     {
         title: 'Standard',
-        price: '$12.60',
+        price: '$14',
         // oldPrice: '₹1080',
         storage: '2 TB',
         storageNote: '65x more than Starter*',
@@ -122,7 +122,7 @@ const Pricing = () => {
                                 <div className="p-6 border-b border-gray-200">
                                     <h3 className="text-xl font-bold mb-2">{plan.title}</h3>
                                     <div className="text-2xl font-semibold text-[rgb(0,29,8)] mb-1">{plan.price}
-                                        {/* <span className="text-base font-normal"> {plan.usd}</span> */}
+                                        <span className="text-base font-normal"> {plan.usd}</span>
                                     </div>
                                     {plan.oldPrice && (
                                         <div className="text-gray-500 line-through text-sm mb-2">{plan.oldPrice}**</div>

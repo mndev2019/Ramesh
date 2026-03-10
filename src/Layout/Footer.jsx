@@ -5,7 +5,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 const Footer = () => {
   const navigate = useNavigate();
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-gray-100 text-gray-800">
       <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
 
         {/* Company Info */}
@@ -13,7 +13,7 @@ const Footer = () => {
           <Link to="/" className="text-2xl font-bold text-gray-800">
             <img src={logo} className="h-15 mb-3" />
           </Link>
-          <p className="text-sm leading-6">
+          <p className="text-md leading-6">
             Google Partner delivering enterprise-grade solutions
             on Google Cloud Platform and Google Workspace.
           </p>
@@ -23,8 +23,8 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-2 text-sm">
+          <h3 className="text-black font-semibold mb-4">Quick Links</h3>
+          <ul className="space-y-2 text-md">
 
             <li className="cursor-pointer hover:text-blue-600" onClick={() => navigate('/gws-pricing')}>Google Workspace</li>
             <li className="cursor-pointer hover:text-blue-600" onClick={() => navigate('/term-condition')}>Terms & Conditions</li>
@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="text-white font-semibold mb-4">Follow Us</h3>
+          <h3 className="text-black font-semibold mb-4">Follow Us</h3>
 
           <div className="flex items-center gap-4">
             <a

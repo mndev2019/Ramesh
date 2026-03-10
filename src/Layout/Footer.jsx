@@ -23,7 +23,7 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-black font-semibold mb-4">Quick Links</h3>
+          <h3 className="text-black font-semibold mb-4 text-md">Quick Links</h3>
           <ul className="space-y-2 text-md">
 
             <li className="cursor-pointer hover:text-blue-600" onClick={() => navigate('/gws-pricing')}>Google Workspace</li>
@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="text-black font-semibold mb-4">Follow Us</h3>
+          <h3 className="text-black font-semibold mb-4 text-md">Follow Us</h3>
 
           <div className="flex items-center gap-4">
             <a

@@ -42,7 +42,7 @@ const handleScrollLink = (e, sectionId) => {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
+        <div className="hidden lg:flex items-center gap-8 text-gray-700 font-medium">
           <Link to="/" onClick={(e) => handleScrollLink(e, "/")} className="hover:text-blue-600 transition">Home</Link>
           <Link onClick={(e) => handleScrollLink(e, "about")} to="/" className="hover:text-blue-600 transition">About</Link>
           <Link to="/" onClick={(e) => handleScrollLink(e, "service")} className="hover:text-blue-600 transition">Services</Link>
@@ -52,20 +52,23 @@ const handleScrollLink = (e, sectionId) => {
           <Link to="/" onClick={(e) => handleScrollLink(e, "blog")} className="hover:text-blue-600 transition">
             Blog
           </Link>
+           <Link to="/" onClick={(e) => handleScrollLink(e, "pricing")} className="hover:text-blue-600 transition">
+            Pricing
+          </Link>
         </div>
 
         {/* Desktop CTA */}
         <Link
           to="/"
           onClick={(e) => handleScrollLink(e, "contact")}
-          className="hidden md:inline-block bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition"
+          className="hidden lg:inline-block bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition"
         >
           Get Consultation
         </Link>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-800 text-2xl"
+          className="lg:hidden text-gray-800 text-2xl"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Menu"
         >
@@ -75,7 +78,7 @@ const handleScrollLink = (e, sectionId) => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden bg-white border-t shadow-lg transition-all duration-300 ${
+        className={`lg:hidden bg-white border-t shadow-lg transition-all duration-300 ${
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
         }`}
       >
@@ -87,6 +90,9 @@ const handleScrollLink = (e, sectionId) => {
             Google Workspace
           </Link>
           <Link onClick={(e) => handleScrollLink(e, "blog")} to="/">Blog</Link>
+           <Link to="/" onClick={(e) => handleScrollLink(e, "pricing")} className="hover:text-blue-600 transition">
+            Pricing
+          </Link>
 
           <Link
             to="/"

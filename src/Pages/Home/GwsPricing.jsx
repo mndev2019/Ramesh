@@ -1,75 +1,76 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 
-import driveIcon from '../../assets/Image/drive.svg'
-import gmailIcon from '../../assets/Image/mail.svg'
-import geminiIcon from '../../assets/Image/gemini.png'
-import meeticon from '../../assets/Image/meet.svg'
-import notebook from '../../assets/Image/notebook.svg'
-import calendericon from '../../assets/Image/calender.svg'
-import docsicon from '../../assets/Image/docs.svg'
-import { IoCheckmarkSharp } from 'react-icons/io5'
-import FreeTrialPopup from '../../Component/FreeTrialPopup.jsx'
+// import driveIcon from '../../assets/Image/drive.svg'
+// import gmailIcon from '../../assets/Image/mail.svg'
+// import geminiIcon from '../../assets/Image/gemini.png'
+// import meeticon from '../../assets/Image/meet.svg'
+// import notebook from '../../assets/Image/notebook.svg'
+// import calendericon from '../../assets/Image/calender.svg'
+// import docsicon from '../../assets/Image/docs.svg'
+// import { IoCheckmarkSharp } from 'react-icons/io5'
+// import FreeTrialPopup from '../../Component/FreeTrialPopup.jsx'
 import Faq from './Faq.jsx'
+import Pricing from './Pricing.jsx'
 import WorkspaceApp from './WorkSpaceApp.jsx'
 
-const plans = [
-    {
-        title: 'Starter',
-        price: '$6',
-        // oldPrice: '₹270',
-        storage: '30 GB',
-        storageNote: 'pooled storage per user*',
-        features: [
-            { icon: gmailIcon, text: 'Custom business email, you@your-company.com' },
-            { icon: geminiIcon, text: 'Gemini AI assistant in Gmail' },
-            { text: 'Chat with AI in the Gemini app' },
-            { icon: meeticon, text: 'Video meetings, 100 participants' },
-            { text: 'Security and management controls' },
-        ],
-    },
-    {
-        title: 'Standard',
-        price: '$12',
-        // oldPrice: '₹1080',
-        storage: '2 TB',
-        storageNote: '65x more than Starter*',
-        features: [
-            { icon: gmailIcon, text: 'Custom business email, you@your-company.com + custom layouts and mail merge' },
-            { icon: geminiIcon, text: 'Gemini AI assistant in Gmail, Docs, Meet and more' },
-            { icon: notebook, text: 'AI research assistant (NotebookLM)' },
-            { icon: geminiIcon, text: 'Chat with AI in the Gemini app + create your team of AI experts' },
-            { icon: meeticon, text: 'Video meetings with recording, noise cancellation, 150 participants' },
-            { icon: calendericon, text: 'Appointment booking pages' },
-            { icon: docsicon, text: 'eSignature with Docs and PDFs' },
-            { text: 'Google Workspace Migrate tool for data migration' },
-        ],
-        extra: 'All of Starter and:',
-        highlighted: true,
-    },
-    {
-        title: 'Plus',
-        price: '$18',
-        storage: '5 TB',
-        storageNote: '2.5x more than Standard*',
-        features: [
-            { icon: gmailIcon, text: 'Custom business email + ediscovery' },
-            { icon: meeticon, text: 'Video meetings with attendance tracking, 500 participants' },
-            { text: 'Vault to retain, archive and search data' },
-            { text: 'Secure LDAP' },
-            { text: 'Advanced endpoint management' },
-            { text: 'Enhanced security and management controls' },
-        ],
-        extra: 'All of Standard and:',
-    },
-]
+// const plans = [
+//     {
+//         title: 'Starter',
+//         price: '$6',
+//         // oldPrice: '₹270',
+//         storage: '30 GB',
+//         storageNote: 'pooled storage per user*',
+//         features: [
+//             { icon: gmailIcon, text: 'Custom business email, you@your-company.com' },
+//             { icon: geminiIcon, text: 'Gemini AI assistant in Gmail' },
+//             { text: 'Chat with AI in the Gemini app' },
+//             { icon: meeticon, text: 'Video meetings, 100 participants' },
+//             { text: 'Security and management controls' },
+//         ],
+//     },
+//     {
+//         title: 'Standard',
+//         price: '$12',
+//         // oldPrice: '₹1080',
+//         storage: '2 TB',
+//         storageNote: '65x more than Starter*',
+//         features: [
+//             { icon: gmailIcon, text: 'Custom business email, you@your-company.com + custom layouts and mail merge' },
+//             { icon: geminiIcon, text: 'Gemini AI assistant in Gmail, Docs, Meet and more' },
+//             { icon: notebook, text: 'AI research assistant (NotebookLM)' },
+//             { icon: geminiIcon, text: 'Chat with AI in the Gemini app + create your team of AI experts' },
+//             { icon: meeticon, text: 'Video meetings with recording, noise cancellation, 150 participants' },
+//             { icon: calendericon, text: 'Appointment booking pages' },
+//             { icon: docsicon, text: 'eSignature with Docs and PDFs' },
+//             { text: 'Google Workspace Migrate tool for data migration' },
+//         ],
+//         extra: 'All of Starter and:',
+//         highlighted: true,
+//     },
+//     {
+//         title: 'Plus',
+//         price: '$18',
+//         storage: '5 TB',
+//         storageNote: '2.5x more than Standard*',
+//         features: [
+//             { icon: gmailIcon, text: 'Custom business email + ediscovery' },
+//             { icon: meeticon, text: 'Video meetings with attendance tracking, 500 participants' },
+//             { text: 'Vault to retain, archive and search data' },
+//             { text: 'Secure LDAP' },
+//             { text: 'Advanced endpoint management' },
+//             { text: 'Enhanced security and management controls' },
+//         ],
+//         extra: 'All of Standard and:',
+//     },
+// ]
 
 const GwsPricing = () => {
-    const [showpopup, setshowpopup] = useState(false)
+    // const [showpopup, setshowpopup] = useState(false)
     return (
 
         <>
             {/* Popup */}
-            {showpopup && (
+            {/* {showpopup && (
                 <FreeTrialPopup
                     isOpen={showpopup}
                     onClose={() => setshowpopup(false)}
@@ -85,7 +86,7 @@ const GwsPricing = () => {
                                 className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border ${plan.highlighted ? 'border-blue-600 scale-105' : 'border-gray-200'
                                     }`}
                             >
-                                {/* Header */}
+                            
                                 <div className="p-6 border-b border-gray-200">
                                     <h3 className="text-xl font-bold mb-2">{plan.title}</h3>
                                     <div className="text-3xl font-bold text-[rgb(0,29,8)] mb-1">{plan.price}
@@ -102,7 +103,7 @@ const GwsPricing = () => {
                                     </button>
                                 </div>
 
-                                {/* Body */}
+                             
                                 <div className="p-6 text-left">
                                     {plan.extra && (
                                         <p className="font-semibold text-gray-800 mb-3">{plan.extra}</p>
@@ -152,8 +153,9 @@ const GwsPricing = () => {
                     </p>
                 </div>
 
-            </section>
-               <WorkspaceApp/>
+            </section> */}
+            <Pricing/>
+             <WorkspaceApp/>
             <Faq />
          
 

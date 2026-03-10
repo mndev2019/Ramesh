@@ -12,6 +12,8 @@ import WorkspaceApp from './WorkSpaceApp'
 import MobileServise from './MobileServise'
 import MobileBlog from '../Blogs/MobileBlog'
 import MobileSolution from './MobileSolution'
+import GwsPricing from './GwsPricing'
+import Pricing from './Pricing'
 
 const Home = () => {
   return (
@@ -21,10 +23,11 @@ const Home = () => {
      <MobileServise/>
      <Whychose/>
      <GoogleCloudPartner/>
-     <GoogleAds/>
+     {/* <GoogleAds/> */}
      <Solutions/>
      <MobileSolution/>
      <GoogleWorkSpace/>
+      <Pricing/>
      <WorkspaceApp/>
      <Blog/>
      <MobileBlog/>

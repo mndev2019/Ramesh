@@ -33,7 +33,7 @@ const services = [
   {
     icon: security,
     title: "Google Workspace Security & Compliance",
-    desc: "Teledigital ensures advanced Google Workspace security, data protection, and compliance solutions to keep your organization safe in the cloud.",
+    desc: "Teledigital ensures advanced Google Workspace security, data protection, and compliance solutions to keep your organization safe and protected in the cloud.",
     path: "/security-compliance",
   },
 ];

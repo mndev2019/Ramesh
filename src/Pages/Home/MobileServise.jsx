@@ -6,39 +6,39 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useNavigate } from "react-router-dom";
 
-import googlecloud from '../../assets/Image/googlecloud.png'
-import gws from '../../assets/Image/gwsicon.webp'
-import cloudmigration from '../../assets/Image/cloudmigration.png'
-import security from '../../assets/Image/key-removebg-preview.png'
+import googlecloud from "../../assets/Image/googlecloud.png";
+import gws from "../../assets/Image/gwsicon.webp";
+import cloudmigration from "../../assets/Image/cloudmigration.png";
+import security from "../../assets/Image/key-removebg-preview.png";
 
 const services = [
   {
     icon: googlecloud,
-    title: "Google Cloud Platform",
-    desc: "Highly available, scalable infrastructure built on Google Cloud.",
-    path:"/gcp"
+    title: "Google Cloud Platform Services",
+    desc: "Teledigital provides scalable and secure Google Cloud Platform services to help businesses modernize their infrastructure and improve performance.",
+    path: "/gcp",
   },
   {
     icon: gws,
-    title: "Google Workspace",
-    desc: "Smarter collaboration for teams that move fast.",
-    path:"/gws-pricing"
+    title: "Google Workspace Partner in Nepal",
+    desc: "Teledigital is a trusted Google Workspace Partner in Nepal offering professional business email with Gmail, collaboration tools, and cloud productivity solutions.",
+    path: "/gws-pricing",
   },
   {
     icon: cloudmigration,
-    title: "Cloud Migration",
-    desc: "Zero-downtime migration with proven cloud strategies.",
-    path:"/cloud-migration"
+    title: "Google Workspace & Cloud Migration",
+    desc: "Our experts provide seamless Google Workspace and cloud migration services to move your data, emails, and applications securely with minimal downtime.",
+    path: "/cloud-migration",
   },
   {
     icon: security,
-    title: "Security & Compliance",
-    desc: "Security-first architecture aligned with global standards.",
-    path:"/security-compliance"
+    title: "Google Workspace Security & Compliance",
+    desc: "Teledigital ensures advanced Google Workspace security, data protection, and compliance solutions to keep your organization safe in the cloud.",
+    path: "/security-compliance",
   },
 ];
 
-const MobileServise = () => {
+const MobileService = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -50,7 +50,6 @@ const MobileServise = () => {
     AOS.refresh();
   }, []);
 
-  // 🔥 Slider Settings
   const settings = {
     dots: false,
     infinite: true,
@@ -60,49 +59,53 @@ const MobileServise = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
-  
+   
   };
 
   return (
-    <section id="service" className="relative py-10 bg-[#f8fafc] overflow-hidden md:hidden block">
-
-      {/* Decorative Blobs */}
+    <section
+      id="service"
+      className="relative py-10 bg-[#f8fafc] overflow-hidden md:hidden block"
+    >
+      {/* Decorative Background */}
       <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-200 rounded-full blur-3xl opacity-30"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-red-200 rounded-full blur-3xl opacity-20"></div>
 
       <div className="relative max-w-7xl mx-auto px-6">
-
         {/* Heading */}
         <div className="text-center mb-16" data-aos="flip-left">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-            Work Smarter with{" "}
-            <span className="text-[#1a73e8]">Google Workspace</span>
+           <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+            Teledigital –{" "}
+            <span className="text-[#1a73e8]">
+              Google Workspace Partner in Nepal
+            </span>
           </h2>
+
           <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">
-            Enterprise-ready cloud solutions designed for the modern workplace.
+            Teledigital is a trusted Google Workspace Partner in Nepal
+            providing Google Workspace setup, business email with Gmail,
+            cloud collaboration tools, migration services, and enterprise
+            security solutions for modern businesses.
           </p>
         </div>
 
-        {/* 🔥 React Slick Slider */}
+        {/* Slider */}
         <Slider {...settings}>
           {services.map((item, index) => (
             <div key={index} className="px-4">
               <div
                 data-aos="zoom-in"
-                className="group relative p-6 rounded-2xl
-                bg-white/70 backdrop-blur-xl
-                border border-white/60
-                
-               
-                transition-all duration-500
-                cursor-pointer h-full"
+                className="group relative p-6 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/60 transition-all duration-500 cursor-pointer h-full"
                 onClick={() => navigate(item.path)}
               >
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/20 to-red-500/10  transition"></div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/20 to-red-500/10 transition"></div>
 
                 <div className="relative">
-                  <img src={item.icon} className="h-[90px] mb-4" alt={item.title} />
+                  <img
+                    src={item.icon}
+                    className="h-[90px] mb-4"
+                    alt={item.title}
+                  />
 
                   <h3 className="text-xl font-semibold mb-3 text-gray-900">
                     {item.title}
@@ -116,10 +119,9 @@ const MobileServise = () => {
             </div>
           ))}
         </Slider>
-
       </div>
     </section>
   );
 };
 
-export default MobileServise;
+export default MobileService;

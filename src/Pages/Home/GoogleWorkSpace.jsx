@@ -14,7 +14,7 @@ const GoogleWorkSpace = () => {
         {/* LEFT CONTENT */}
         <div>
           <span className="text-blue-600 font-semibold uppercase tracking-wide">
-            Google Workspace
+           Google Workspace Partner in Nepal
           </span>
 
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mt-4 leading-tight">

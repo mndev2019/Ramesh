@@ -83,16 +83,17 @@ const GoogleCloudPartner = () => {
                             </h1>
 
                             <p className="mt-6 text-lg text-gray-600 max-w-xl">
-                                Modernize your business with scalable cloud architecture,
-                                AI-driven innovation, and enterprise-grade security —
-                                designed to help you grow faster and operate smarter.
+                                Teledigital is a trusted Google Cloud Partner providing secure and scalable
+                                Google Cloud services in Nepal. We help businesses migrate to Google Cloud,
+                                build modern infrastructure, and leverage AI-driven cloud innovation with
+                                enterprise-grade security and global reliability.
                             </p>
 
-                            
-                              
 
 
-                           
+
+
+
 
                         </div>
 
@@ -102,7 +103,7 @@ const GoogleCloudPartner = () => {
                             <div className="bg-white/70 backdrop-blur-xl border border-blue-100 rounded-3xl p-10 shadow-2xl">
 
                                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                                    Why Move to Google Cloud?
+                                    Why Businesses in Nepal Choose Teledigital for Google Cloud
                                 </h3>
 
                                 <ul className="space-y-4 text-gray-700">
@@ -176,9 +177,11 @@ const GoogleCloudPartner = () => {
                             Transform Your Infrastructure
                         </h2>
                         <p className="mt-6 text-gray-600 leading-relaxed">
-                            We help organizations modernize applications, migrate workloads,
-                            and optimize infrastructure using Google’s global cloud network.
-                            Experience better performance, improved agility, and secure growth.
+                            Teledigital helps organizations in Nepal modernize applications,
+                            migrate workloads, and optimize infrastructure using Google Cloud
+                            Platform. As a reliable Google Cloud and Google Workspace partner,
+                            we deliver scalable cloud solutions, secure infrastructure,
+                            and high-performance computing for growing businesses.
                         </p>
                     </div>
 
@@ -209,7 +212,7 @@ const GoogleCloudPartner = () => {
             <section className="py-28 bg-white">
                 <div className="max-w-6xl mx-auto px-6 text-center">
                     <h2 className="text-4xl font-bold" data-aos="fade-up">
-                        Our Cloud Capabilities
+                        Google Cloud Services by Teledigital
                     </h2>
 
                     <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -257,10 +260,15 @@ const GoogleCloudPartner = () => {
             </section>
 
             {/* ================= CTA ================= */}
-            <section className="py-28 bg-white text-center">
-                <h2 className="text-4xl font-bold" data-aos="fade-up">
-                    Ready to Elevate Your Cloud Strategy?
+            <section className="py-28 px-5 bg-white text-center">
+                <h2 className="md:text-4xl text-3xl font-bold" data-aos="fade-up">
+                    Start Your Google Cloud Journey with Teledigital
                 </h2>
+                <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    Teledigital is a leading provider of Google Cloud services in Nepal,
+                    helping companies adopt cloud infrastructure, secure data, and
+                    scale their digital operations using Google’s powerful technology.
+                </p>
                 <button
                     onClick={(e) => handleScrollLink(e, "contact")}
                     className="mt-8 px-10 py-4 bg-indigo-700 text-white font-semibold rounded-full shadow-xl hover:scale-105 transition cursor-pointer"

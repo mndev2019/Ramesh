@@ -81,10 +81,10 @@ const MobileBlog = () => {
       <div className="text-center mb-14" data-aos="flip-left">
         <h2 className="text-4xl font-bold text-gray-800">
           Insights & Updates from{" "}
-          <span className="text-blue-600">Trusted Google Workspace Partner</span>
+          <span className="text-blue-600">Trusted Google Workspace Partner in Nepal</span>
         </h2>
         <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-          As a trusted Google Workspace Partner, we share expert insights,
+          As a trusted Google Workspace Partner in Nepal, we share expert insights,
           productivity tips, and digital transformation strategies.
         </p>
       </div>
@@ -105,7 +105,7 @@ const MobileBlog = () => {
               Transform Your Business with Google Workspace Solutions
             </h3>
             <p className="text-gray-200 mt-4 max-w-lg">
-             Trusted Google Workspace Partner empowers organizations with seamless migration,
+             Trusted Google Workspace Partner in Nepal empowers organizations with seamless migration,
               implementation, and support services for Google Workspace.
             </p>
             <button

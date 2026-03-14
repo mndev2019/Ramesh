@@ -3,24 +3,25 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Banner = () => {
   const navigate = useNavigate();
+
   const handleScrollLink = (e, sectionId) => {
-  e.preventDefault()
-  // setIsOpen(false)
+    e.preventDefault();
 
-  if (location.pathname !== "/") {
-    navigate("/")
+    if (location.pathname !== "/") {
+      navigate("/");
 
-    setTimeout(() => {
+      setTimeout(() => {
+        document
+          .getElementById(sectionId)
+          ?.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    } else {
       document
         .getElementById(sectionId)
-        ?.scrollIntoView({ behavior: "smooth" })
-    }, 300)
-  } else {
-    document
-      .getElementById(sectionId)
-      ?.scrollIntoView({ behavior: "smooth" })
-  }
-}
+        ?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="/" className="relative bg-white overflow-hidden">
       
@@ -33,33 +34,35 @@ const Banner = () => {
         {/* LEFT CONTENT */}
         <div>
           <span className="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-medium">
-             Google Workspace Partner
+            Trusted Google Workspace Partner in Nepal
           </span>
 
           <h1 className="mt-6 text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
-            Transform Your Business With
-            <span className="text-blue-600"> Google Workspace</span>
+            Best Google Workspace Solutions for Businesses in
+            <span className="text-blue-600"> Nepal</span>
           </h1>
 
           <p className="mt-6 md:text-lg text-md text-gray-600 leading-relaxed">
-            Boost collaboration, enhance security, and streamline operations
-            with enterprise-grade Google Workspace solutions tailored for
-            modern businesses.
+             Teledigital is a reliable Google Workspace partner in Nepal providing
+            professional business email, cloud collaboration tools, and secure
+            Google Workspace setup for companies in Nepal. Improve productivity
+            with Gmail, Google Drive, Meet, and other powerful Google Workspace
+            business solutions.
           </p>
 
           {/* Feature Points */}
           <div className="mt-8 grid grid-cols-2 gap-4 text-sm text-gray-700">
             <div className="flex items-center gap-2">
-              ✅ Secure Cloud Email
+              ✅ Secure Business Email with Gmail
             </div>
             <div className="flex items-center gap-2">
-              ✅ Seamless Migration
+              ✅ Google Workspace Migration Services
             </div>
             <div className="flex items-center gap-2">
-              ✅ Admin & Security Setup
+              ✅ Google Workspace Admin & Security Setup
             </div>
             <div className="flex items-center gap-2">
-              ✅ 24/7 Support
+              ✅ 24/7 Google Workspace Support
             </div>
           </div>
 
@@ -70,7 +73,7 @@ const Banner = () => {
               onClick={(e) => handleScrollLink(e, "contact")}
               className="bg-blue-600 text-white md:px-8 px-5 md:py-3 py-2 rounded-xl font-semibold hover:bg-blue-700 transition shadow-lg"
             >
-              Get Consultation
+              Get Google Workspace Consultation
             </Link>
 
             <Link
@@ -78,7 +81,7 @@ const Banner = () => {
               onClick={(e) => handleScrollLink(e, "service")}
               className="border border-blue-600 text-blue-600 md:px-8 px-5 md:py-3 py-2 rounded-xl font-semibold hover:bg-blue-50 transition"
             >
-              Explore Services
+              Explore Google Workspace Services
             </Link>
           </div>
         </div>
@@ -88,16 +91,18 @@ const Banner = () => {
           <div className="bg-gradient-to-br from-blue-600 to-indigo-600 text-white p-10 rounded-3xl shadow-2xl">
 
             <h3 className="text-2xl font-semibold mb-4">
-              Google Workspace Solutions
+              Google Workspace Services in Nepal
             </h3>
 
             <p className="text-blue-100 leading-relaxed">
-              We help businesses migrate, manage, and secure their digital
-              workplace using Google's trusted collaboration platform.
+              Our team helps businesses with Google Workspace setup, email
+              migration, cloud collaboration tools, and secure deployment.
+              We ensure a smooth transition to Google's trusted business
+              productivity platform.
             </p>
 
             <div className="mt-8 border-t border-blue-400 pt-6 text-sm">
-              ✔ Official Partner Support  
+              ✔ Official Partner Support 
               <br />
               ✔ Enterprise Deployment  
               <br />
@@ -108,10 +113,10 @@ const Banner = () => {
           {/* Floating Mini Card */}
           <div className="absolute bottom-[-68px] -left-8 bg-white p-6 rounded-2xl shadow-xl hidden md:block">
             <h4 className="text-gray-900 font-semibold">
-              Trusted by Growing Businesses
+              Trusted Google Workspace Provider
             </h4>
             <p className="text-sm text-gray-600 mt-2">
-              Reliable • Secure • Scalable
+              Reliable • Secure • Scalable Cloud Solutions
             </p>
           </div>
         </div>

@@ -27,7 +27,7 @@ const SecurityCompliance = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
-   const handleScrollLink = (e, sectionId) => {
+  const handleScrollLink = (e, sectionId) => {
     e.preventDefault()
     // setIsOpen(false)
 
@@ -69,7 +69,7 @@ const SecurityCompliance = () => {
             className="text-5xl md:text-7xl font-extrabold leading-tight"
             data-aos="fade-up"
           >
-            Secure Infrastructure.
+            Secure Cloud Infrastructure.
             <span className="block bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text">
               Built for Enterprise.
             </span>
@@ -80,9 +80,11 @@ const SecurityCompliance = () => {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            Protect your workloads with advanced security controls,
-            global certifications, and continuous monitoring designed
-            for modern cloud environments.
+            Teledigital provides advanced cloud security and compliance
+            solutions for businesses in Nepal using Google Cloud
+            infrastructure. Protect workloads, applications, and
+            sensitive data with enterprise-grade encryption,
+            threat monitoring, and globally certified security standards.
           </p>
 
           <div
@@ -93,7 +95,7 @@ const SecurityCompliance = () => {
             <button onClick={(e) => handleScrollLink(e, "contact")} className="px-8 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition shadow-xl cursor-pointer">
               Talk to Expert
             </button>
-           
+
           </div>
         </div>
       </section>
@@ -105,11 +107,13 @@ const SecurityCompliance = () => {
 
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold">
-              Multi-Layered Security Framework
+              Enterprise Cloud Security Framework
             </h2>
             <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
-              A defense-in-depth model designed to protect data, users,
-              and infrastructure at every layer.
+              Teledigital delivers multi-layered cloud security solutions
+              for organizations in Nepal using Google Cloud technology.
+              Our approach protects infrastructure, data, and users
+              with advanced monitoring, encryption, and compliance frameworks.
             </p>
           </div>
 
@@ -140,7 +144,7 @@ const SecurityCompliance = () => {
       <section className="py-24 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center">
 
         <h2 className="text-4xl font-bold mb-12">
-          Globally Recognized Certifications
+          Global Security & Compliance Certifications
         </h2>
 
         <div className="flex flex-wrap justify-center gap-10 text-lg font-medium">
@@ -155,7 +159,7 @@ const SecurityCompliance = () => {
 
       </section>
 
-    
+
 
     </div>
   );

@@ -26,9 +26,9 @@ const plans = [
             { icon: meeticon, text: 'Video meetings, 100 participants' },
             { text: 'Security and management controls' },
         ],
-        usd:"USD",
-        btn:"Start Free Trial",
-          user:" / user per month"
+        usd: "USD",
+        btn: "Start Free Trial",
+        user: " / user per month"
     },
     {
         title: 'Standard',
@@ -47,10 +47,10 @@ const plans = [
             { text: 'Google Workspace Migrate tool for data migration' },
         ],
         extra: 'All of Starter and:',
-        usd:"USD",
+        usd: "USD",
         highlighted: true,
-         btn:"Start Free Trial",
-           user:" / user per month"
+        btn: "Start Free Trial",
+        user: " / user per month"
     },
     {
         title: 'Plus',
@@ -66,9 +66,9 @@ const plans = [
             { text: 'Enhanced security and management controls' },
         ],
         extra: 'All of Standard and:',
-        usd:"USD",
-         btn:"Start Free Trial",
-           user:" / user per month"
+        usd: "USD",
+        btn: "Start Free Trial",
+        user: " / user per month"
     },
     {
         title: 'Enterprise',
@@ -86,9 +86,9 @@ const plans = [
             { text: 'Enhanced support with faster response times for critical issues' },
         ],
         extra: 'All features mentioned and:',
-         btn:"Contact Sales",
-         user:""
-        
+        btn: "Contact Sales",
+        user: ""
+
     },
 ]
 
@@ -128,10 +128,10 @@ const Pricing = () => {
                                         <div className="text-gray-500 line-through text-sm mb-2">{plan.oldPrice}**</div>
                                     )}
                                     <p className="text-sm text-gray-600 mb-4">
-                                       {plan.user}
+                                        {plan.user}
                                     </p>
                                     <button onClick={() => setshowpopup(true)} className="w-full px-5 py-2 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition cursor-pointer">
-                                       {plan.btn}
+                                        {plan.btn}
                                     </button>
                                 </div>
 
@@ -169,19 +169,30 @@ const Pricing = () => {
                 </div>
                 <div className="grid grid-cols-1 lg:px-20 px-10 mt-10">
                     <p className='text-sm text-gray-600 mb-4'>
-                        Business Starter, Business Standard and Business Plus plans can be purchased for a maximum of 300 users.
-                        Google Workspace customers in Nepal may have access to additional features for a limited promotional period.
+                        Google Workspace Business Starter, Business Standard, and Business Plus
+                        plans can be purchased for up to 300 users. As a trusted
+                        Google Workspace Partner in Nepal, Teledigital
+                        helps businesses choose the right Google Workspace plan for professional
+                        business email, collaboration tools, and cloud productivity solutions.
                     </p>
 
                     <p className='text-sm text-gray-600 mb-4'>
-                        *Google Workspace provides flexible pooled storage per user that is shared across the organisation.
-                        Business Starter includes 30 GB pooled storage per user, Business Standard includes 2 TB, and Business Plus includes 5 TB pooled storage per user.
-                        Contact our sales team to learn more about additional storage options for your organisation.
+                        *Google Workspace provides flexible pooled cloud storage shared across
+                        your organisation. Business Starter includes 30 GB storage per user,
+                        Business Standard includes 2 TB, and Business Plus includes 5 TB pooled
+                        storage per user.Teledigital offers expert
+                        consultation, setup, and support for Google Workspace services in Nepal.
+                        Contact our team to learn more about additional storage and cloud
+                        solutions for your organisation.
                     </p>
 
                     <p className='text-sm text-gray-600 mb-4'>
-                        **Offer available to new customers only. Introductory pricing (if applicable) is valid for a limited period.
-                        Standard pricing will apply after the promotional period ends. Final pricing in NPR will be shown before completing sign-up.
+                        **Offer available to new customers only. Introductory pricing (if
+                        applicable) is valid for a limited promotional period. Standard pricing
+                        will apply after the promotional period ends. Pricing is displayed in USD
+                        and may vary depending on Google Workspace plans and billing terms.
+                        Final billing details will be confirmed during sign-up through
+                        Teledigital – Google Workspace Partner in Nepal.
                     </p>
                 </div>
 

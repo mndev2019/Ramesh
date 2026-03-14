@@ -63,13 +63,15 @@ const CloudMigration = () => {
 
           <div data-aos="fade-right">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
-              Modernize Your Business <br />
+              Modernize Your Business in Nepal <br />
               <span className="text-blue-600">with Cloud Migration</span>
             </h1>
 
             <p className="mt-6 text-lg text-gray-700 max-w-xl leading-relaxed">
-              Migrate applications, databases, and infrastructure to a secure,
-              scalable cloud environment. Reduce operational costs and unlock innovation.
+              Teledigital provides secure and reliable cloud migration services in Nepal.
+              As a trusted Google Cloud Partner, we help businesses migrate applications,
+              databases, and infrastructure to Google Cloud with improved performance,
+              enterprise security, and scalable cloud infrastructure.
             </p>
 
 
@@ -78,7 +80,7 @@ const CloudMigration = () => {
           <div data-aos="fade-left" className="hidden lg:block">
             <div className="bg-white/70 backdrop-blur-xl border border-white/50 p-10 rounded-3xl shadow-xl">
               <h3 className="text-2xl font-semibold text-blue-600">
-                Cloud Advantages
+                Benefits of Google Cloud Migration
               </h3>
               <ul className="mt-6 space-y-4 text-gray-700">
                 <li>✔ Scalable Infrastructure</li>
@@ -101,8 +103,10 @@ const CloudMigration = () => {
               Why Businesses Are Moving to Cloud
             </h2>
             <p className="mt-6 text-gray-600 leading-relaxed">
-              Cloud migration empowers organizations to modernize operations,
-              increase performance, and improve cost efficiency with a secure foundation.
+              Businesses in Nepal are adopting Google Cloud migration to improve
+              scalability, enhance security, and reduce infrastructure costs.
+              Teledigital helps organizations transition smoothly to cloud
+              infrastructure using proven Google Cloud migration strategies.
             </p>
           </div>
 
@@ -128,7 +132,7 @@ const CloudMigration = () => {
         <div className="max-w-6xl mx-auto px-6">
 
           <h2 className="text-3xl md:text-4xl font-bold text-center" data-aos="fade-up">
-            Migration Tools & Services
+            Google Cloud Migration Tools & Services
           </h2>
 
           <div className="mt-20 grid md:grid-cols-2 gap-x-20 gap-y-16">
@@ -192,8 +196,9 @@ const CloudMigration = () => {
         </h2>
 
         <p className="mt-6 text-lg text-white/90 max-w-2xl mx-auto">
-          Let our cloud experts design and execute a secure, scalable migration
-          strategy tailored to your business.
+          Teledigital cloud experts help businesses in Nepal migrate to Google Cloud
+          securely and efficiently. Start your cloud migration journey with a
+          reliable Google Cloud Partner today.
         </p>
 
         <button onClick={(e) => handleScrollLink(e, "contact")} className="mt-10 px-10 py-3 bg-white text-blue-600 font-semibold rounded-full hover:bg-gray-100 transition shadow-lg cursor-pointer">

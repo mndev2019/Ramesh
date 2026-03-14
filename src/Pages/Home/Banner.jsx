@@ -73,7 +73,7 @@ const Banner = () => {
               onClick={(e) => handleScrollLink(e, "contact")}
               className="bg-blue-600 text-white md:px-8 px-5 md:py-3 py-2 rounded-xl font-semibold hover:bg-blue-700 transition shadow-lg"
             >
-              Get Google Workspace Consultation
+              Get Consultation
             </Link>
 
             <Link
@@ -81,7 +81,7 @@ const Banner = () => {
               onClick={(e) => handleScrollLink(e, "service")}
               className="border border-blue-600 text-blue-600 md:px-8 px-5 md:py-3 py-2 rounded-xl font-semibold hover:bg-blue-50 transition"
             >
-              Explore Google Workspace Services
+              Explore Services
             </Link>
           </div>
         </div>

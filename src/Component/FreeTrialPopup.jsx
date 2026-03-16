@@ -84,19 +84,19 @@ const FreeTrialPopup = ({ isOpen, onClose }) => {
                             <>
                                 {/* Heading */}
                                 <div className="text-center mb-6">
-                                     {/* Google Cloud Partner Image */}
-                                    <div className="flex justify-center mt-3">
+                                    {/* Google Cloud Partner Image */}
+                                    <div className="flex justify-center mt-2">
                                         <img
                                             src={googlecloud}
                                             alt="Google Cloud Partner"
-                                            className="h-30 object-contain"
+                                            className="h-25 object-contain"
                                         />
                                     </div>
-                                    <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                                        Get Started With Google
+                                    <h2 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                                        Get Started with TeleDigital – Google Workspace Partner
                                     </h2>
 
-                                   
+
 
                                     {/* <p className="text-gray-500 text-sm mt-3">
                                         Share your details and our team will connect with you.
@@ -122,12 +122,12 @@ const FreeTrialPopup = ({ isOpen, onClose }) => {
                                             onChange={handleChange}
                                             placeholder={field.placeholder}
                                             required
-                                            className="w-full border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 rounded-xl px-4 py-3 outline-none transition-all duration-300 shadow-sm focus:shadow-md"
+                                            className="w-full border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 rounded-[6px] px-4 py-2 outline-none transition-all duration-300 shadow-sm focus:shadow-md"
                                         />
                                     ))}
 
                                     {/* Buttons */}
-                                    <div className="flex justify-between items-center pt-4">
+                                    <div className="flex justify-between items-center pt-2">
                                         <button
                                             type="button"
                                             onClick={onClose}
@@ -145,7 +145,7 @@ const FreeTrialPopup = ({ isOpen, onClose }) => {
                                     </div>
                                 </form>
 
-                                <p className="mt-6 text-center text-gray-400 text-xs">
+                                <p className="mt-2 text-center text-gray-400 text-xs">
                                     Your information is secure and confidential.
                                 </p>
                             </>

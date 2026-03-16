@@ -27,7 +27,7 @@ const plans = [
             { text: 'Security and management controls' },
         ],
         usd: "USD",
-        btn: "Start Free Trial",
+        btn: "Get Started",
         user: " / user per month"
     },
     {
@@ -49,7 +49,7 @@ const plans = [
         extra: 'All of Starter and:',
         usd: "USD",
         highlighted: true,
-        btn: "Start Free Trial",
+        btn: "Get Started",
         user: " / user per month"
     },
     {
@@ -67,7 +67,7 @@ const plans = [
         ],
         extra: 'All of Standard and:',
         usd: "USD",
-        btn: "Start Free Trial",
+        btn: "Get Started",
         user: " / user per month"
     },
     {

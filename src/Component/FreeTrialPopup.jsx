@@ -5,6 +5,7 @@ import googlecloud from '../assets/Image/googlecloud.svg'
 
 const FreeTrialPopup = ({ isOpen, onClose }) => {
     const [isThankYouOpen, setIsThankYouOpen] = useState(false);
+    const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
         name: "",
         organization_name: "",
@@ -25,6 +26,9 @@ const FreeTrialPopup = ({ isOpen, onClose }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (loading) return; // 👉 prevent multiple clicks
+
+        setLoading(true);
 
         try {
             const response = await fetch(`${Base_Url}/enquiry`, {
@@ -56,6 +60,8 @@ const FreeTrialPopup = ({ isOpen, onClose }) => {
         } catch (error) {
             console.error("API Error:", error);
             toast.error("Server error. Please try again later.");
+        } finally {
+            setLoading(false); // 👉 always reset
         }
     };
 
@@ -136,11 +142,17 @@ const FreeTrialPopup = ({ isOpen, onClose }) => {
                                             Cancel
                                         </button>
 
+
                                         <button
                                             type="submit"
-                                            className="px-6 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                                            disabled={loading}
+                                            className={` py-2 px-6 text-white font-medium rounded-full transition-all duration-500 
+                                  ${loading
+                                                    ? "bg-gray-400 cursor-not-allowed"
+                                                    : " bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                                                }`}
                                         >
-                                            Submit
+                                            {loading ? "Submitting..." : "Submit"}
                                         </button>
                                     </div>
                                 </form>

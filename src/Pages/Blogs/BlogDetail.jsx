@@ -4,30 +4,31 @@ import axios from "axios";
 import { Base_Url } from "../../Api/Base_Url";
 import { toast } from "react-toastify";
 import { FaArrowLeft } from "react-icons/fa";
+import Seo from "../../Seocomponent/Seo";
 
 
 const BlogDetail = () => {
-  const { id } = useParams();
+  const { slug } = useParams();
   const navigate = useNavigate();
   const [blog, setBlog] = useState(null);
 
   const fetchSingleBlog = async () => {
     try {
-      const resp = await axios.get(`${Base_Url}/blog/${id}`);
+      const resp = await axios.get(`${Base_Url}/blog/${slug}`);
       if (resp.data.success) {
         setBlog(resp.data.data);
       } else {
         toast.error(resp.data.message);
       }
     } catch (error) {
-        console.log(error)
+      console.log(error)
       toast.error("Failed to fetch blog");
     }
   };
 
   React.useEffect(() => {
     fetchSingleBlog();
-  }, [id]);
+  }, [slug]);
 
   if (!blog) {
     return (
@@ -39,8 +40,12 @@ const BlogDetail = () => {
 
   return (
     <>
-     
 
+      <Seo
+        title={`${blog.title} | Teledigital Blog`}
+        description={blog.short_description?.slice(0, 150)}
+        keywords={`${blog.title}, Teledigital blog, cloud solutions, Google Workspace, Trusted Google Workspace partner in Nepal`}
+      />
       {/* HERO SECTION */}
       <div className="relative h-[70vh] flex items-center justify-center text-white">
 
@@ -57,17 +62,17 @@ const BlogDetail = () => {
             Featured Insight
           </span>
 
-          <h1 className="text-4xl md:text-5xl font-bold mt-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold mt-6 leading-tight">
             {blog.title}
           </h1>
 
-          <p className="mt-6 text-lg text-gray-200">
+          <p className="mt-6 md:text-lg text-sm text-gray-200">
             {blog.short_description}
           </p>
 
           <button
             onClick={() => navigate(-1)}
-            className="mt-8 inline-flex items-center gap-2 bg-white text-blue-700 px-6 py-2 rounded-full hover:bg-blue-100 transition"
+            className="md:mt-8 mt-5 mb-8 inline-flex items-center gap-2 bg-white text-blue-700 px-6 py-2 rounded-full hover:bg-blue-100 transition"
           >
             <FaArrowLeft /> Back to Home
           </button>
@@ -91,7 +96,7 @@ const BlogDetail = () => {
         </div>
       </section>
 
-   
+
     </>
   );
 };

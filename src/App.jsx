@@ -46,7 +46,7 @@ function App() {
           <Route path='/gws-pricing' element={<GwsPricing />} />
           <Route path='/term-condition' element={<TermsCondition />} />
           <Route path='/blog' element={<Blog />} />
-          <Route path="/blog-detail/:id" element={<BlogDetail />} />
+          <Route path="/blog-detail/:slug" element={<BlogDetail />} />
           <Route path='/gcp' element={<GCPDetail/>}/>
           <Route path='/cloud-migration' element={<CloudMigration/>}/>
           <Route path='/security-compliance' element={<SecurityCompliance/>}/>

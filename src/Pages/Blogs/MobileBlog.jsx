@@ -119,7 +119,7 @@ const MobileBlog = () => {
       </div>
 
       {/* Blog Slider */}
-      <div data-aos="fade-up">
+      <div>
         <Slider {...settings}>
           {data.map((blog) => (
             <div key={blog._id} className="px-3">
@@ -143,7 +143,7 @@ const MobileBlog = () => {
 
                   <button
                     onClick={() =>
-                      navigate(`/blog-detail/${blog._id}`)
+                      navigate(`/blog-detail/${blog.slug}`)
                     }
                     className="mt-4 text-blue-600 font-medium flex items-center gap-2 group-hover:gap-3 transition-all"
                   >

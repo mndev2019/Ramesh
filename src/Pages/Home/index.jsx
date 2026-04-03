@@ -35,8 +35,10 @@ const Home = () => {
       <GoogleWorkSpace />
       <Pricing />
       <WorkspaceApp />
-      <Blog />
-      <MobileBlog />
+      <div id="blog">
+        <Blog />
+        <MobileBlog />
+      </div>
       <Contact />
     </>
   )

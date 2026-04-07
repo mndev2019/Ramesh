@@ -142,7 +142,7 @@ const Blog = () => {
                 <div className="bg-white rounded-2xl shadow-md overflow-hidden group hover:shadow-xl transition duration-300">
                   <div className="overflow-hidden">
                     <img
-                      src={`${Base_Url}/${blog.image}`}
+                      src={blog.image}
                       alt={blog.title}
                       className="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
                     />

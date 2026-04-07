@@ -50,7 +50,7 @@ const BlogDetail = () => {
       <div className="relative h-[70vh] flex items-center justify-center text-white">
 
         <img
-          src={`${Base_Url}/${blog.image}`}
+          src={blog.image}
           alt={blog.title}
           className="absolute inset-0 w-full h-full object-cover"
         />

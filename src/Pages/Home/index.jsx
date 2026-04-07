@@ -25,8 +25,11 @@ const Home = () => {
         keywords="Teledigital, Google Cloud Partner, Google Cloud Partner Nepal, Google Cloud services in Nepal, Cloud migration Nepal, Google Cloud infrastructure, Google Workspace Partner in Nepal, Google Workspace Services in Nepal, Google Workspace Migration, Business Email with Gmail, Cloud Migration Services Nepal, Google Cloud Migration, Secure Cloud Infrastructure, Teledigital Cloud Services, Cloud Infrastructure Nepal"
       />
       <Banner />
-      <Service />
-      <MobileServise />
+      <div id="service">
+        <Service />
+        <MobileServise />
+      </div>
+
       <Whychose />
       <GoogleCloudPartner />
       {/* <GoogleAds/> */}
